@@ -6,11 +6,17 @@
     border-radius: 4px;
     &.fix-on{
       border: solid 0.5px $white;
+      input::placeholder{
+        color: $white;
+      }
     }
     input{
       width: 100%;
       padding: 4px 10px;
       font-size: 1.2rem;
+      &::placeholder{
+        color: $brown;
+      }
     }
   }
   button{
@@ -21,7 +27,7 @@
 }
 /* わたしについて アイコン */
 .aboutme{
-  margin: 0 26px 0 70px;
+  margin: 0 26px 0 50px;
   position: relative;
   a{
     font-size: 1.4rem;
@@ -29,8 +35,10 @@
       width: 26px;
       position: absolute;
       top: 50%;
-      left: -36px;
       transform: translateY(-50%);
+    }
+    span{
+      padding-left: 32px;
     }
   }
 }
