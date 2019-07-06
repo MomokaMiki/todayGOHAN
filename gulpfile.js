@@ -96,7 +96,7 @@ var browserSync = require('browser-sync');
 gulp.task('sync', function (done) {
   browserSync({
     // 下の"proxy"の部分に、作業中のhtmlのパスを指定してください。
-    proxy: "http://localhost/Git/todayGOHAN/"
+    proxy: "http://localhost/Git/todayGOHAN/about.html"
   });
   done();
 });

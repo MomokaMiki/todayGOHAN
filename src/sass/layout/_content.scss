@@ -1,0 +1,115 @@
+/*** aboutページ ***/
+.about{
+  margin-bottom: 100px;
+}
+/* etc */
+.deco-box p{
+  width: 40px;
+  position: absolute;
+}
+.prof,
+.reason,
+.myinfo{
+  text-align: center;
+  color: $brown;
+  position: relative;
+  a{
+    color: $brown;
+  }
+}
+/* prof */
+.prof{
+  margin-top: 100px;
+  position: relative;
+  &__image{
+    width: 146px;
+    height: 146px;
+    margin: 0 auto;
+    background: #333;
+    border-radius: 50%;
+  }
+  &__text{
+    margin-top: 30px;
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+  &__deco{
+    width: 40px;
+    position: absolute;
+    top: -28px;
+    left: 40%;
+    transform: rotate(-8deg);
+  }
+}
+/* reason */
+.reason{
+  margin-top: 100px;
+  &__head{
+    margin-bottom: 40px;
+    font-size: 1.4rem;
+  }
+  &__list li{
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  &__end{
+    margin-top: 40px;
+    font-size: 1.2rem;
+  }
+  .deco-box{
+    p:first-child{
+      top: 26px;
+      left: 20%;
+    }
+    p:nth-of-type(2){
+      top: 60px;
+      left: 25%;
+    }
+    p:nth-of-type(3){
+      top: 137px;
+      right: 20%;
+    }
+    p:last-child{
+      top: 170px;
+      right: 24%;
+    }
+  }
+}
+/* myinfo */
+.myinfo{
+  &__head{
+    margin-bottom: 26px;
+    font-size: 1.6rem;
+  }
+  &__link a{
+    font-size: 1.4rem;
+  }
+}
+/* contact */
+.contact{
+  margin-top: 120px;
+  .deco-box{
+    p:first-child{
+      top: -10px;
+      left: 17%;
+    }
+    p:last-child{
+      top: 34px;
+      left: 22%;
+    }
+  }
+}
+/* port */
+.port{
+  margin-top: 70px;
+  .deco-box{
+    p:first-child{
+      top: -20px;
+      right: 18%;
+    }
+    p:last-child{
+      top: 48px;
+      right: 22%;
+    } 
+  }
+}
