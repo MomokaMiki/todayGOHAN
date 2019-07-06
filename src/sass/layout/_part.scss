@@ -4,6 +4,9 @@
     width: 240px;
     border: solid 0.5px $brown;
     border-radius: 4px;
+    &.fix-on{
+      border: solid 0.5px $white;
+    }
     input{
       width: 100%;
       padding: 4px 10px;
@@ -145,7 +148,8 @@
       position: absolute;
       top: 18px;
       left: -6px;
-      padding: 4px 0 0 10px;      background-image: url("../img/deco-tag.png");
+      padding: 4px 0 0 10px;      
+      background-image: url("../img/deco-tag.png");
       background-size: contain;
       color: $white;
       font-size: 1.2rem;

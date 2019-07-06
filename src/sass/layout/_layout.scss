@@ -10,11 +10,30 @@ body{
 .head{
   width: 100%;
   position: relative;
+  z-index: 1;
   color: $brown;
+  &.fix-on{
+    height: 150px;
+    position: fixed;
+    background-image: url("../img/deco-nav.png");
+    background-size: contain;
+    background-repeat: repeat;
+    background-position-x: 30px;
+    color: $white;
+    a{
+      color: $white;
+    }
+  }
   a{
     color: $brown;
   }
   &__logo{
+    &.fix-on{
+      margin-top: 10px;
+      position: static;
+      transform: none;
+      font-size: 2rem;
+    }
     position: absolute;
     top: 120px;
     left: 50%;
@@ -27,6 +46,9 @@ body{
     justify-content: flex-end;
   }
   &__nav{
+    &.fix-on{
+      top: 26px;
+    }
     position: relative;
     top: 222px;
   }
