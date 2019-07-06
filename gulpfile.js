@@ -29,7 +29,7 @@ gulp.task('sass',function(done){
       outputStyle:'expanded'
     }))
     .pipe(autoprefixer({
-      browsers: ['last 2 version', 'iOS >= 8.1', 'Android >= 4.4']
+      overrideBrowserslist: ['last 2 version', 'iOS >= 8.1', 'Android >= 4.4']
     }))
     .pipe(gcmq())
     .pipe(sourcemaps.write())
@@ -55,8 +55,15 @@ gulp.task('imagemin', function (done) {
   gulp.src('./src/imagemin/*.+(jpg|jpeg|png|gif)')
     .pipe(changed('./imagemin'))
     .pipe(imagemin([
-      imageminPng(),
-      imageminJpg(),
+      imageminPng({
+        quality: [.65,.80],
+        speed: 1,
+        floyd: 0
+      }),
+      imageminJpg({
+        quality: 85,
+        progressive: true
+      }),
       imageminGif({
         interlaced: false,
         optimizationLevel: 3,
@@ -73,10 +80,10 @@ gulp.task('imagemin', function (done) {
 });
 
 // jsファイル結合
-var concat = require('gulp-concat');
+// var concat = require('gulp-concat');
 
 // gulp.task('concat', function (done) {
-//   gulp.src(['./src/concat/works.js', './src/concat/load.js', './src/concat/scroll.js', './src/concat/event.js'])
+//   gulp.src(['./src/concat/load.js','./src/concat/works.js','./src/concat/scroll.js', './src/concat/event.js'])
 //     .pipe(plumber())
 //     .pipe(concat('script.js'))
 //     .pipe(gulp.dest('./js/'));
@@ -88,22 +95,23 @@ var browserSync = require('browser-sync');
 
 gulp.task('sync', function (done) {
   browserSync({
-    proxy: "localhost/todayGOHAN/"
+    // 下の"proxy"の部分に、作業中のhtmlのパスを指定してください。
+    proxy: "http://localhost/Git/todayGOHAN/"
   });
   done();
 });
 gulp.task('bs-reload', function (done) {
-  browserSync.reload();
+    browserSync.reload();
   done();
 });
 
 // ファイル監視
 gulp.task('watch',  function (done) {
-  gulp.watch("./**/*.html", gulp.series('bs-reload'));
-  // gulp.watch("./**/*.php", gulp.series('bs-reload'));
   gulp.watch("./src/sass/**/*.scss", gulp.series('sass', 'bs-reload'));
   gulp.watch("./src/imagemin/*", gulp.series('imagemin', 'bs-reload'));
   // gulp.watch("./src/concat/*.js", gulp.series('concat', 'bs-reload'))
+  gulp.watch("./**/*.html", gulp.series('bs-reload'));
+  // gulp.watch("./**/*.php", gulp.series('bs-reload'));
   done();
 });
 
@@ -140,14 +148,4 @@ gulp.task('cssmin', function (done) {
   done();
 });
 
-// ES6からES5にコンパイル
-var babel = require('gulp-babel');
-
-gulp.task('babel', function (done) {
-  gulp.src('./js/*.js')
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(gulp.dest('./babel/'));
-  done();
-});
+gulp.task('default', gulp.series('sass', 'imagemin', 'sync', 'watch'));

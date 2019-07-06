@@ -1,0 +1,47 @@
+body{
+  background: $white;
+}
+.head-inner,
+.main-inner{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* header */
+.head{
+  width: 100%;
+  position: relative;
+  color: $brown;
+  a{
+    color: $brown;
+  }
+  &__logo{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    font-size: 4.2rem;
+    transform: translateX(-50%);
+  }
+  &__info{
+    height: 46px;
+    margin-right: 20px;
+    justify-content: flex-end;
+  }
+  &__nav{
+    position: relative;
+    top: 222px;
+  }
+}
+/* main */
+.main{
+  width: 100%;
+  position: absolute;
+  top: 340px;
+}
+/* footer */
+.foot{
+  margin-bottom: 12px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $brown;
+}

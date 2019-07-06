@@ -1,0 +1,139 @@
+/* 検索バー */
+.search{
+  p{
+    width: 240px;
+    border: solid 0.5px $brown;
+    border-radius: 4px;
+    input{
+      width: 100%;
+      padding: 0 6px;
+      font-size: 1.2rem;
+    }
+  }
+  button{
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+  }
+}
+/* わたしについて アイコン */
+.aboutme{
+  margin: 0 26px 0 70px;
+  position: relative;
+  a{
+    font-size: 1.4rem;
+    img{
+      width: 26px;
+      position: absolute;
+      top: 50%;
+      left: -36px;
+      transform: translateY(-50%);
+    }
+  }
+}
+/* snsアイコン */
+.snslist{
+  li{
+    &:last-child{
+      margin-left: 12px;
+    }
+    a{
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+/* グローバルナビ */
+.gl-nav,
+.gl-nav ul{
+  width: 100%;
+}
+.gl-nav li{
+  width: 25%;
+  font-size: 1.6rem;
+  text-align: center;
+}
+/* title */
+.title{
+  h2{
+    span{
+      margin: 0 28px 0 16px;
+      font-size: 1.8rem;
+    }
+    img{
+      width: 30px;
+    }
+  }
+  p{
+    font-size: 1.2rem;
+  }
+}
+/* ページネーション */
+.page{
+  justify-content: flex-end;
+  margin-top: 10px;
+  p,a{
+    color: $brown;
+    font-size: 1.4rem;
+  }
+  &__btn-prev img,
+  &__btn-next img{
+    width: 8px;
+  }
+  &__btn-next img{
+    transform: rotate(180deg);
+  }
+  &__numbers{
+    margin: 0 6px;
+    p{
+      margin: 0 4px;
+    }
+    span{
+      margin: 0 10px;
+    }
+  }
+}
+.page-bottom{
+  position: relative;
+  bottom: 44px;
+}
+/* 投稿リスト */
+.list-posts{
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* 投稿 単体 */
+.post{
+  width: 288px;
+  margin-bottom: 60px;
+  position: relative;
+  &__image{
+    figure{
+      width: 100%;
+    }
+    p{
+      width: 90px;
+      height: 30px;
+      position: absolute;
+      top: 18px;
+      left: -6px;
+      padding-left: 12px;
+      background-image: url("../img/deco-tag.png");
+      background-size: contain;
+      color: $white;
+      font-size: 1.2rem;
+    }
+  }
+  &__title{
+    margin-top: 6px;
+    padding-left: 10px;
+    font-size: 1.6rem;
+  }
+  &__info{
+    margin-top: 4px;
+    padding: 0 10px;
+    font-size: 1.2rem;
+  }
+}
