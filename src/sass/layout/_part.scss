@@ -67,6 +67,7 @@
   font-size: 1.6rem;
   text-align: center;
   line-height: 38px;
+  position: relative;
   a{
     display: inline-block;
     width: 100%;
@@ -88,6 +89,28 @@
   }
   &:last-child a:hover{
     background-image: url("../img/deco-cate04.png");
+  }
+  &:nth-of-type(2)::before,
+  &:nth-of-type(3)::before,
+  &:last-child::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 100%;
+    left: -30px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: contain;
+  }
+  &:nth-of-type(2)::before{
+    background-image: url("../img/deco-nav01.png");
+  }
+  &:nth-of-type(3)::before{
+    background-image: url("../img/deco-nav02.png");
+  }
+  &:last-child::before{
+    background-image: url("../img/deco-nav03.png");
   }
 }
 /* title */

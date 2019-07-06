@@ -28,7 +28,7 @@ $(function(){
   $(window).on("scroll",function(){
     let scrollTop = $(window).scrollTop();
     /* スクロール値が180以上であれば、headerをfixedバージョンにする */
-    if(scrollTop >= 180){
+    if(scrollTop >= 120){
       if(head.hasClass("fix-on")){
         return false;
       }

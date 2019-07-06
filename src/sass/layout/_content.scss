@@ -116,17 +116,20 @@
 
 /*** detailページ ***/
 .detail{
-  max-width: 900px;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  color: $brown;
   &__title{
+    align-items: flex-end;
     h2{
-      font-size: 1.8rem;
+      font-size: 2.4rem;
     }
     p{
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
   &__shumb{
-    width: 700px;
+    width: 900px;
     margin: 60px auto;
     &__image{
       position: relative;
@@ -136,28 +139,33 @@
         position: absolute;
         top: 44px;
         left: -8px;
-        padding: 6px 0 0 20px;      
+        padding: 8px 0 0 20px;      
         background-image: url("../img/deco-tag.png");
         background-size: contain;
         color: $white;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
       }
     }
     &__made{
+      margin: 8px 14px 0;
       font-size: 1.4rem;
       text-align: right;
     }
   }
   &__menu{
     margin-bottom: 100px;
+    h3{
+      margin-bottom: 30px;
+    }
     li{
+      margin-bottom: 10px;
       img{
         width: 30px;
         height: 30px;
-        margin-right: 6px;
+        margin-right: 10px;
       }
       span{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
     }
   }
@@ -168,7 +176,7 @@
       margin: 0 auto;
     }
     h3{
-      margin-top: 40px;
+      margin: 40px 0;
     }
     p{
       font-size: 1.4rem;
@@ -177,19 +185,29 @@
   }
   &__terro{
     margin-bottom: 100px;
+    h3{
+      margin-bottom: 70px;
+    }
     figure{
-      width: 800px;
+      width: 700px;
       margin: 0 auto;
+      img{
+        border-radius: 4px;
+      }
+    }
+  }
+  &__recom{
+    h3{
+      margin-bottom: 32px;
     }
   }
 }
 .post-content{
   h3{
-    margin-bottom: 40px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     img{
       width: 40px;
-      margin-right: 10px;
+      margin-right: 16px;
     }
   }
 }
