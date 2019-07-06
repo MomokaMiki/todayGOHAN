@@ -1,4 +1,7 @@
 $(function(){
-      let pageHeight = $(document).height();
-      $(".foot").css('top', pageHeight);
-    })
+  $(window).on("load",function(){
+    let pageHeight = $(document).height();
+    console.log(pageHeight);
+    $(".foot").css('top', pageHeight);
+  })
+})

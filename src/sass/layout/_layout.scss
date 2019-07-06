@@ -35,13 +35,17 @@ body{
 .main{
   width: 100%;
   position: absolute;
-  top: 340px;
+  top: 360px;
 }
 /* footer */
 .foot{
   margin-bottom: 12px;
   position: absolute;
   left: 50%;
+  top: 0;
   transform: translateX(-50%);
   color: $brown;
+  small{
+    font-size: 1.2rem;
+  }
 }

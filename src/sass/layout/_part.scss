@@ -6,7 +6,7 @@
     border-radius: 4px;
     input{
       width: 100%;
-      padding: 0 6px;
+      padding: 4px 10px;
       font-size: 1.2rem;
     }
   }
@@ -51,11 +51,37 @@
 }
 .gl-nav li{
   width: 25%;
+  height: 38px;
+  margin: 0 20px;
   font-size: 1.6rem;
   text-align: center;
+  line-height: 38px;
+  a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+  }
+  &:hover a{
+    color: $lightbrown;
+  }
+  &:first-child a:hover{
+    background-image: url("../img/deco-cate01.png");
+  }
+  &:nth-of-type(2) a:hover{
+    background-image: url("../img/deco-cate02.png");
+  }
+  &:nth-of-type(3) a:hover{
+    background-image: url("../img/deco-cate03.png");
+  }
+  &:last-child a:hover{
+    background-image: url("../img/deco-cate04.png");
+  }
 }
 /* title */
 .title{
+  color: $brown;
   h2{
     span{
       margin: 0 28px 0 16px;
@@ -66,6 +92,7 @@
     }
   }
   p{
+    margin-top: 2px;
     font-size: 1.2rem;
   }
 }
@@ -101,9 +128,8 @@
 /* 投稿リスト */
 .list-posts{
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 12px;
 }
-
 /* 投稿 単体 */
 .post{
   width: 288px;
@@ -119,21 +145,22 @@
       position: absolute;
       top: 18px;
       left: -6px;
-      padding-left: 12px;
-      background-image: url("../img/deco-tag.png");
+      padding: 4px 0 0 10px;      background-image: url("../img/deco-tag.png");
       background-size: contain;
       color: $white;
       font-size: 1.2rem;
     }
   }
   &__title{
-    margin-top: 6px;
+    margin-top: 12px;
     padding-left: 10px;
     font-size: 1.6rem;
+    color: $brown;
   }
   &__info{
-    margin-top: 4px;
+    margin-top: 14px;
     padding: 0 10px;
     font-size: 1.2rem;
+    color: $brown;
   }
 }
