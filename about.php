@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -38,8 +38,12 @@
         </ul>
       </nav>
     </div>
-  </header>
-  
+  </header> -->
+  <?php
+  /*
+  Template Name: テンプレート名
+  */
+  ?>
   <main class="main">
     <div class="main-inner about">
       <h2 class="page-title">わたしについて</h2>
@@ -81,11 +85,11 @@
       </div>
     </div>
   </main>
-  <footer class="foot">
+  <!-- <footer class="foot">
     <small>&copy;&nbsp;2019&nbsp;todayGOHAN</small>
   </footer> 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/main.js"></script>
   <script type="text/javascript" src="//typesquare.com/3/tsad/script/ja/typesquare.js?5b49521a4774449c972b1df2e90393a3" charset="utf-8"></script>
 </body>
-</html>
+</html> -->
